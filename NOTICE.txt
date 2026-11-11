@@ -1,0 +1,35 @@
+MERS-CoV, South Korea, 2015
+===========================
+
+Source:   The R package outbreaks, dataset mers_korea_2015.
+          https://www.reconverse.org/outbreaks/reference/mers_korea_2015.html
+          https://github.com/reconverse/outbreaks (data/mers_korea_2015.RData,
+          retrieved 2026-11-11, 3,069 bytes, sha256 2a08976a01d41ca6c4e800684c3606813dcadbac6e633483ef513b3f9f182b88)
+
+Collected: By the Epidemic Intelligence and Response section of the European
+          Centre for Disease Prevention and Control (ECDC), from public
+          information during the first weeks of the outbreak. Transfer to R and
+          documentation by Bertrand Sudre (ECDC), as the package states.
+
+Purpose:  The package describes the dataset as meant for teaching purposes,
+          and as neither the final outbreak investigation results nor a
+          complete description of the transmission chain.
+
+Terms:    NO LICENCE FOR THE DATA IS STATED by the package or by ECDC, as far
+          as was found on 2026-11-11. The package's code is MIT (GitHub) and
+          GPL (>= 2) (CRAN 1.9.0); neither licence is stated to cover the data.
+          The data are used here for teaching, the purpose the package states,
+          by decision of the Fieldwork practitioner on 2026-11-11. That is a
+          judgement about use, not a licence grant. The LICENSE file (CC0)
+          covers this repository's own files -- scripts/convert.R and the
+          documentation -- and NOT the data in data/.
+
+Changed:  Nothing in the values. scripts/convert.R reads the .RData with R and
+          writes its two data frames as CSV: data/mers_korea_2015_linelist.csv
+          (162 cases, 15 columns) and data/mers_korea_2015_contacts.csv (98
+          links, 4 columns). Missing values are written as empty cells.
+
+Further reading on the outbreak's early stage, cited by the package:
+          Penttinen PM, Kaasik-Aaslav K, Friaux A, et al. Taking stock of the
+          first 133 MERS coronavirus cases globally -- Is the epidemic
+          changing? Euro Surveill. 2013;18(39):pii=20596.

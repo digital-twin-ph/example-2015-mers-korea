@@ -1,0 +1,45 @@
+{
+  "schema": "fieldwork/example-provenance/1",
+  "retrieved": "2026-11-11",
+  "title": "MERS-CoV, South Korea, 2015",
+  "source": {
+    "package": "outbreaks",
+    "dataset": "mers_korea_2015",
+    "page": "https://www.reconverse.org/outbreaks/reference/mers_korea_2015.html",
+    "file": "https://raw.githubusercontent.com/reconverse/outbreaks/master/data/mers_korea_2015.RData",
+    "bytes": 3069,
+    "sha256": "2a08976a01d41ca6c4e800684c3606813dcadbac6e633483ef513b3f9f182b88"
+  },
+  "publisher": "European Centre for Disease Prevention and Control, Epidemic Intelligence and Response section; transfer to R and documentation by Bertrand Sudre",
+  "purpose": "Teaching, as the package states; neither the final investigation nor a complete transmission chain.",
+  "licence": "NONE STATED for the data, checked 2026-11-11. Package code: MIT (GitHub), GPL (>= 2) (CRAN 1.9.0).",
+  "licenceDecision": "Used for teaching, the purpose the package states, by the Fieldwork practitioner's decision of 2026-11-11: \"Our use case for these worked examples is for teaching so that fits MERS Korea purpose\". A judgement about use, not a licence grant.",
+  "transcription": {
+    "script": "scripts/convert.R",
+    "runtime": "R (Rscript --vanilla)",
+    "files": {
+      "data/mers_korea_2015_linelist.csv": {
+        "rows": 162,
+        "columns": 15,
+        "sha256": "b678afea07eb3f980658c95c7284fff75c3528d6f8c0e6ec4550c0506fd3ff7f",
+        "missing": {
+          "dt_onset": 27,
+          "dt_start_exp": 5,
+          "dt_end_exp": 5,
+          "dt_death": 152
+        }
+      },
+      "data/mers_korea_2015_contacts.csv": {
+        "rows": 98,
+        "columns": 4,
+        "sha256": "6b94ef8ffa61e365572d05d65a33d559174212d95fe60d94bf6076a682b414c1",
+        "missing": {}
+      }
+    }
+  },
+  "limits": [
+    "Dates are per case, collected in the outbreak's first weeks: case-level timeliness (onset to report, onset to diagnosis) can be computed for the 135 cases with an onset date; a 7-1-7 review of the outbreak as one event cannot, since no early response action dates are held.",
+    "dt_death is empty for the 152 cases not recorded as dead.",
+    "The contacts are probable links, as the package says, not a confirmed transmission chain."
+  ]
+}

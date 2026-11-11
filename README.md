@@ -1,0 +1,20 @@
+# MERS-CoV, South Korea, 2015
+
+A Fieldwork worked example, for teaching: the line list and probable contacts of the first weeks of the 2015 MERS-CoV
+outbreak in South Korea, as published in the R package `outbreaks`.
+
+| File | What it holds |
+| --- | --- |
+| `data/mers_korea_2015_linelist.csv` | 162 cases, 15 columns: age, sex, place of infection, hospital, dates of onset, report, exposure, diagnosis and death, outcome |
+| `data/mers_korea_2015_contacts.csv` | 98 probable links between cases, with the place of exposure and the days between onsets |
+| `scripts/convert.R` | Reads the package's `.RData` and writes the two CSVs, changing no value |
+| `NOTICE.txt`, `provenance.json` | Where the data come from, the terms as found, and what was done |
+
+**Terms.** No licence for the data is stated by the package or by ECDC; the package describes the dataset as meant for
+teaching. It is used here on that basis. `LICENSE` (CC0) covers this repository's own files, not the data. See
+`NOTICE.txt`.
+
+**Limits.** Dates are per case. Onset to report and onset to diagnosis can be computed for the 135 cases with an onset
+date; a 7-1-7 review of the outbreak as one event cannot, because no early response action dates are held.
+
+The Fieldwork workflows for this example are still to come.

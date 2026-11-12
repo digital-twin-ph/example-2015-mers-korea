@@ -7,6 +7,7 @@ outbreak in South Korea, as published in the R package `outbreaks`.
 | --- | --- |
 | `data/mers_korea_2015_linelist.csv` | 162 cases, 15 columns: age, sex, place of infection, hospital, dates of onset, report, exposure, diagnosis and death, outcome |
 | `data/mers_korea_2015_contacts.csv` | 98 probable links between cases, with the place of exposure and the days between onsets |
+| `fieldwork-project.json.gz` | The Fieldwork project: one workflow, *How quickly was each case detected and reported?* |
 | `scripts/convert.R` | Reads the package's `.RData` and writes the two CSVs, changing no value |
 | `NOTICE.txt`, `provenance.json` | Where the data come from, the terms as found, and what was done |
 
@@ -17,4 +18,15 @@ teaching. It is used here on that basis. `LICENSE` (CC0) covers this repository'
 **Limits.** Dates are per case. Onset to report and onset to diagnosis can be computed for the 135 cases with an onset
 date; a 7-1-7 review of the outbreak as one event cannot, because no early response action dates are held.
 
-The Fieldwork workflows for this example are still to come.
+**The workflow.** *How quickly was each case detected and reported?* reads the line list, applies Fieldwork's
+published *7-1-7 timeliness* ruleset with `dt_onset`, `dt_diag` and `dt_report` as emergence, detection and
+notification, and counts each verdict:
+
+| Interval | Met | NotMet | NoVerdict |
+| --- | --- | --- | --- |
+| Onset to diagnosis, within 7 days | 94 | 41 | 27, no onset date |
+| Diagnosis to report, within 1 day | 161 | 1 | 0 |
+
+Seven cases were reported a day before their diagnosis date; their interval is −1 days, as the file holds it. No case
+has a response date, so none has a verdict on the third target. Open `fieldwork-project.json.gz` in Fieldwork with
+**Import**.

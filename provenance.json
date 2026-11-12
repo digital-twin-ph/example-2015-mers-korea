@@ -41,5 +41,24 @@
     "Dates are per case, collected in the outbreak's first weeks: case-level timeliness (onset to report, onset to diagnosis) can be computed for the 135 cases with an onset date; a 7-1-7 review of the outbreak as one event cannot, since no early response action dates are held.",
     "dt_death is empty for the 152 cases not recorded as dead.",
     "The contacts are probable links, as the package says, not a confirmed transmission chain."
-  ]
+  ],
+  "derived": {
+    "data/mers_korea_2015_facilities.csv": {
+      "made": "2026-11-12",
+      "rows": 13,
+      "sha256": "26fecb9e1afd2a4e7362ac6497d4cbc7fe6707fd114d9ab37eec6b93b28df0c3",
+      "joinsOn": "loc_hosp, as the line list writes it",
+      "licence": "ODbL-1.0, for the OpenStreetMap coordinates it carries; (c) OpenStreetMap contributors",
+      "sources": {
+        "OpenStreetMap": "10 rows (one a street, not the facility), read through Nominatim lookups on 2026-11-12",
+        "Wikidata": "2 rows (Hallym University Dongtan Sacred Heart Hospital, Q16099199), CC0",
+        "identification": "The hospitals named by the Korean government on 7 June 2015, and by Gangdong-gu on 1 July 2015"
+      },
+      "limits": [
+        "loc_hosp is defined by the package as the hospital where a case was hospitalized; its counts follow where cases were exposed. A map of it shows hospitals named for cases.",
+        "\"Hallym University Medical Center\" names a network of hospitals; Dongtan is the most likely, marked low confidence.",
+        "Asan Seoul Clinic is placed at the middle of its street, and 365 Seoul Yeollin Clinic not at all: neither is mapped."
+      ]
+    }
+  }
 }

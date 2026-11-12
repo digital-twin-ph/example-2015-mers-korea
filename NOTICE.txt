@@ -33,3 +33,18 @@ Further reading on the outbreak's early stage, cited by the package:
           Penttinen PM, Kaasik-Aaslav K, Friaux A, et al. Taking stock of the
           first 133 MERS coronavirus cases globally -- Is the epidemic
           changing? Euro Surveill. 2013;18(39):pii=20596.
+
+Hospitals: data/mers_korea_2015_facilities.csv, made for this repository on
+          2026-11-12. One row for each hospital as the line list writes it in
+          loc_hosp, with the facility identified, its coordinates and their
+          source. Coordinates: OpenStreetMap (10 rows), (c) OpenStreetMap
+          contributors, Open Database License 1.0,
+          https://www.openstreetmap.org/copyright; Wikidata (2 rows), CC0 1.0.
+          Because it contains OpenStreetMap data, THIS FILE IS UNDER THE ODbL
+          1.0: a database derived from it must be offered under the same
+          licence, with this attribution. Not covered by LICENSE (CC0).
+          Identification checked against the hospitals named by the Korean
+          government on 7 June 2015 (as reported in Korean news, Tenasia and
+          the Kyunghyang Shinmun) and by Gangdong-gu on 1 July 2015
+          (https://www.gangdong.go.kr/web/newportal/press/5551). Confidence and
+          the reason for it are in each row.

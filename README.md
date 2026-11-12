@@ -7,6 +7,7 @@ outbreak in South Korea, as published in the R package `outbreaks`.
 | --- | --- |
 | `data/mers_korea_2015_linelist.csv` | 162 cases, 15 columns: age, sex, place of infection, hospital, dates of onset, report, exposure, diagnosis and death, outcome |
 | `data/mers_korea_2015_contacts.csv` | 98 probable links between cases, with the place of exposure and the days between onsets |
+| `data/mers_korea_2015_facilities.csv` | Each hospital named in the line list's `loc_hosp`, as written, with the facility it is, its coordinates, their source and how sure the identification is. ODbL 1.0 |
 | `fieldwork-project.json.gz` | The Fieldwork project: *How quickly was each case detected and reported?* and *Who infected whom, and where?* |
 | `scripts/convert.R` | Reads the package's `.RData` and writes the two CSVs, changing no value |
 | `NOTICE.txt`, `provenance.json` | Where the data come from, the terms as found, and what was done |
@@ -14,6 +15,15 @@ outbreak in South Korea, as published in the R package `outbreaks`.
 **Terms.** No licence for the data is stated by the package or by ECDC; the package describes the dataset as meant for
 teaching. It is used here on that basis. `LICENSE` (CC0) covers this repository's own files, not the data. See
 `NOTICE.txt`.
+
+**Where the hospitals are.** `data/mers_korea_2015_facilities.csv` has one row for each of the 13 ways the line list
+writes a hospital, so it joins on `loc_hosp` as written. Eleven are placed at the facility, from OpenStreetMap or Wikidata;
+Asan Seoul Clinic only at the middle of its street, as the clinic is not mapped; 365 Seoul Yeollin Clinic not at all.
+Each is checked against the hospitals the Korean government named on 7 June 2015. "Hallym University Medical Center"
+names a network of hospitals: Dongtan is the most likely and is marked low confidence. The package defines `loc_hosp`
+as the hospital where a case was hospitalized, and its counts follow where cases were exposed; a map of it shows the
+hospitals named for cases, not where each was infected. The file carries OpenStreetMap data, so it is under the Open
+Database License 1.0: © OpenStreetMap contributors.
 
 **Limits.** Dates are per case. Onset to report and onset to diagnosis can be computed for the 135 cases with an onset
 date; a 7-1-7 review of the outbreak as one event cannot, because no early response action dates are held.

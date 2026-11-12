@@ -30,7 +30,9 @@ notification, and counts each verdict:
 Seven cases were reported a day before their diagnosis date; their interval is −1 days, as the file holds it. No case
 has a response date, so none has a verdict on the third target. *Who infected whom, and where?* reads the 98 probable links and counts the cases each source infected (11 sources;
 SK_14 38, SK_1 26, SK_16 21) and where exposure happened (hospital room 44, emergency room 33, hospital visit 12, contact
-with a health worker 8, family member 1). It draws no transmission tree: SK_39 has three recorded sources and SK_107
-two, and choosing one is not the file's to make.
+with a health worker 8, family member 1). It also draws who infected whom as a tree:
+the line list related to the contacts with one row per recorded source (Relate keeps one row per match), so SK_39's
+three sources and SK_107's two are all drawn, the first placing the case and the others dashed. 162 cases in 67 chains;
+the largest starts with SK_1 and holds 94 cases over 4 generations.
 
 Open `fieldwork-project.json.gz` in Fieldwork with **Import**.

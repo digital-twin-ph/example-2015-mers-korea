@@ -7,7 +7,7 @@ outbreak in South Korea, as published in the R package `outbreaks`.
 | --- | --- |
 | `data/mers_korea_2015_linelist.csv` | 162 cases, 15 columns: age, sex, place of infection, hospital, dates of onset, report, exposure, diagnosis and death, outcome |
 | `data/mers_korea_2015_contacts.csv` | 98 probable links between cases, with the place of exposure and the days between onsets |
-| `fieldwork-project.json.gz` | The Fieldwork project: one workflow, *How quickly was each case detected and reported?* |
+| `fieldwork-project.json.gz` | The Fieldwork project: *How quickly was each case detected and reported?* and *Who infected whom, and where?* |
 | `scripts/convert.R` | Reads the package's `.RData` and writes the two CSVs, changing no value |
 | `NOTICE.txt`, `provenance.json` | Where the data come from, the terms as found, and what was done |
 
@@ -28,5 +28,9 @@ notification, and counts each verdict:
 | Diagnosis to report, within 1 day | 161 | 1 | 0 |
 
 Seven cases were reported a day before their diagnosis date; their interval is −1 days, as the file holds it. No case
-has a response date, so none has a verdict on the third target. Open `fieldwork-project.json.gz` in Fieldwork with
-**Import**.
+has a response date, so none has a verdict on the third target. *Who infected whom, and where?* reads the 98 probable links and counts the cases each source infected (11 sources;
+SK_14 38, SK_1 26, SK_16 21) and where exposure happened (hospital room 44, emergency room 33, hospital visit 12, contact
+with a health worker 8, family member 1). It draws no transmission tree: SK_39 has three recorded sources and SK_107
+two, and choosing one is not the file's to make.
+
+Open `fieldwork-project.json.gz` in Fieldwork with **Import**.

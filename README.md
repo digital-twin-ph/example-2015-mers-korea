@@ -19,10 +19,10 @@ teaching. It is used here on that basis. `LICENSE` (CC0) covers this repository'
 date; a 7-1-7 review of the outbreak as one event cannot, because no early response action dates are held.
 
 **The workflow.** *How quickly was each case detected and reported?* reads the line list, applies Fieldwork's
-published *7-1-7 timeliness* ruleset with `dt_onset`, `dt_diag` and `dt_report` as emergence, detection and
+published *7-1-7 timeliness* ruleset (2.0.0) with `dt_onset`, `dt_diag` and `dt_report` as emergence, detection and
 notification, and counts each verdict:
 
-| Interval | Met | NotMet | NoVerdict |
+| Interval | Met | Not met | No verdict |
 | --- | --- | --- | --- |
 | Onset to diagnosis, within 7 days | 94 | 41 | 27, no onset date |
 | Diagnosis to report, within 1 day | 161 | 1 | 0 |

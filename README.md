@@ -46,11 +46,12 @@ three sources and SK_107's two are all drawn, the first placing the case and the
 the largest starts with SK_1 and holds 94 cases over 4 generations.
 
 *Where were the cases in hospital?* counts the cases by `loc_hosp` as the line list writes it, relates each count to the
-hospitals table on that name, places the hospitals, and maps them over South Korea's 17 provinces, each mark's area in
-proportion to its cases (1 to 80). Samsung Medical Center's two spellings stay two rows at one place, 80 and 5, as
-written. 12 hospitals are drawn; 365 Seoul Yeollin Clinic has no position and is listed, not drawn. The map shows the
+hospitals table on that name, places the hospitals, and maps them over South Korea's 17 provinces, every mark one size and
+coloured by its cases in five classes from light to dark, so a hospital near Samsung Medical Center is not hidden under
+its mark. Samsung Medical Center's two spellings stay two rows at one place, 80 and 5, as written. 12 hospitals are drawn; 365 Seoul Yeollin Clinic has no position and is listed, not drawn. The map shows the
 hospitals named for cases, which the package defines as where each was hospitalized; it is not where each was infected.
 The provinces are geoBoundaries' gbOpen ADM1 for South Korea (release 9469f09, from Natural Earth, 2021, Public Domain),
-carried inside the project. Needs Fieldwork 0.106.0 or later: earlier versions refuse the provinces as one inside another.
+carried inside the project. Needs Fieldwork 0.110.0 or later: earlier versions draw the hospitals in one colour, and before 0.106.0 refuse the
+provinces as one inside another.
 
 Open `fieldwork-project.json.gz` in Fieldwork with **Import**.

@@ -59,6 +59,14 @@
         "\"Hallym University Medical Center\" names a network of hospitals; Dongtan is the most likely, marked low confidence.",
         "Asan Seoul Clinic is placed at the middle of its street, and 365 Seoul Yeollin Clinic not at all: neither is mapped."
       ]
+    },
+    "fieldwork-project.json.gz: the study area of \"Where were the cases in hospital?\"": {
+      "made": "2026-11-12",
+      "source": "geoBoundaries gbOpen ADM1, KOR, release 9469f09, 17 units",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/KOR/ADM1/geoBoundaries-KOR-ADM1.geojson",
+      "bytes": 208196,
+      "licence": "Public Domain (from Natural Earth), representing 2021",
+      "changed": "Nothing"
     }
   }
 }

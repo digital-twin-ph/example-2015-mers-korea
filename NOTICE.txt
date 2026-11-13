@@ -48,3 +48,9 @@ Hospitals: data/mers_korea_2015_facilities.csv, made for this repository on
           the Kyunghyang Shinmun) and by Gangdong-gu on 1 July 2015
           (https://www.gangdong.go.kr/web/newportal/press/5551). Confidence and
           the reason for it are in each row.
+
+Provinces: The third workflow's study area is South Korea's 17 provinces from
+          geoBoundaries, gbOpen ADM1, release 9469f09
+          (https://github.com/wmgeolab/geoBoundaries), from Natural Earth,
+          representing 2021, Public Domain. Carried inside
+          fieldwork-project.json.gz; not changed.

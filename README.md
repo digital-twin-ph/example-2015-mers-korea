@@ -8,7 +8,7 @@ outbreak in South Korea, as published in the R package `outbreaks`.
 | `data/mers_korea_2015_linelist.csv` | 162 cases, 15 columns: age, sex, place of infection, hospital, dates of onset, report, exposure, diagnosis and death, outcome |
 | `data/mers_korea_2015_contacts.csv` | 98 probable links between cases, with the place of exposure and the days between onsets |
 | `data/mers_korea_2015_facilities.csv` | Each hospital named in the line list's `loc_hosp`, as written, with the facility it is, its coordinates, their source and how sure the identification is. ODbL 1.0 |
-| `fieldwork-project.json.gz` | The Fieldwork project: *How quickly was each case detected and reported?* and *Who infected whom, and where?* |
+| `fieldwork-project.json.gz` | The Fieldwork project: *How quickly was each case detected and reported?*, *Who infected whom, and where?* and *Where were the cases in hospital?* |
 | `scripts/convert.R` | Reads the package's `.RData` and writes the two CSVs, changing no value |
 | `NOTICE.txt`, `provenance.json` | Where the data come from, the terms as found, and what was done |
 
@@ -44,5 +44,13 @@ with a health worker 8, family member 1). It also draws who infected whom as a t
 the line list related to the contacts with one row per recorded source (Relate keeps one row per match), so SK_39's
 three sources and SK_107's two are all drawn, the first placing the case and the others dashed. 162 cases in 67 chains;
 the largest starts with SK_1 and holds 94 cases over 4 generations.
+
+*Where were the cases in hospital?* counts the cases by `loc_hosp` as the line list writes it, relates each count to the
+hospitals table on that name, places the hospitals, and maps them over South Korea's 17 provinces, each mark's area in
+proportion to its cases (1 to 80). Samsung Medical Center's two spellings stay two rows at one place, 80 and 5, as
+written. 12 hospitals are drawn; 365 Seoul Yeollin Clinic has no position and is listed, not drawn. The map shows the
+hospitals named for cases, which the package defines as where each was hospitalized; it is not where each was infected.
+The provinces are geoBoundaries' gbOpen ADM1 for South Korea (release 9469f09, from Natural Earth, 2021, Public Domain),
+carried inside the project. Needs Fieldwork 0.106.0 or later: earlier versions refuse the provinces as one inside another.
 
 Open `fieldwork-project.json.gz` in Fieldwork with **Import**.

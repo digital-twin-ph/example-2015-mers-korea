@@ -88,10 +88,19 @@ all links, and the median days between a source's onset and its case's, by setti
 health worker 14, hospital room 12, hospital visit 12, emergency room 18). The days are the package's `diff_dt_onset`;
 a link with an undocumented basis gives an interval no firmer than the link.
 
+*How many did each case infect?* counts each source's probable links, relates the counts onto all 162 cases (a case no
+link names as a source is declared 0, with that reason), and counts the cases by how many they infected, as a table and
+as bars: 151 infected no recorded case, 5 one, 2 two, 1 four, and three infected 21, 26 and 38. Most cases infected
+nobody and three caused most of the outbreak: superspreading. The links are probable, as the package says, so these are
+recorded links, not every infection.
+
+**Sources, in the write-up.** Each source step records what it is, who published it, where it was read, its licence and
+its citation, so the project's Notes say where every table came from and References lists them.
+
 **What the package's line list does not say.** It was compiled by ECDC's Epidemic Intelligence from public reports in the
 outbreak's first weeks, so it stops at 162 cases. The meaning of `dt_report` against `dt_diag` is not documented, and
 7 cases are reported a day before their diagnosis, SK_1 among them; they are counted as written. How the probable links
 were assigned is not documented either.
 
-Open `fieldwork-project.json.gz` in Fieldwork with **Import**. Needs Fieldwork 0.114.0 or later for the medians, and
-for a median of a column computed by a rule.
+Open `fieldwork-project.json.gz` in Fieldwork with **Import**. Needs Fieldwork 0.116.0 or later for every step's Methods note and the sources in References; 0.114.0 or later for
+the medians.

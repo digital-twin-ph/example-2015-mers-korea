@@ -72,10 +72,26 @@ response was 9, 18 or 19 days after detection, not met whichever action counts. 
 literature and WHO, cited in the table; which action completes the early response is a judgement this example does not
 make.
 
+*How deadly was it, and for whom?* counts the line list's 162 cases by age class and outcome, with each age class's
+deaths and survivals as shares of it (70-79: 7 of 25 died, 28%), and by sex and outcome into a two-by-two: 14 of 99 men
+died and 5 of 63 women, 14.1% against 7.9%, a ratio of 1.78 (95% interval 0.67 to 4.71). The interval holds 1, and no
+study design is connected, so the ratio is named by its arithmetic and claims nothing about sex as a cause.
+
+*How long from exposure to onset, and from onset to death?* computes two columns for every case with rules written on
+the step: the days from the last day of exposure to onset, and from onset to death. The median from exposure to onset is
+6 days for the 118 survivors with both dates and 7 for the 15 who died. Some cases have onset before their last day
+of exposure (as low as −8 days): the exposure window ran past onset, so the figure is not an incubation period for them,
+and they are counted as written. Onset to death has both dates for 7 of the 19 deaths.
+
+*Who spread it, and how fast?* reads the 98 probable links: the secondary cases per source with each source's share of
+all links, and the median days between a source's onset and its case's, by setting (family member 7, contact with a
+health worker 14, hospital room 12, hospital visit 12, emergency room 18). The days are the package's `diff_dt_onset`;
+a link with an undocumented basis gives an interval no firmer than the link.
+
 **What the package's line list does not say.** It was compiled by ECDC's Epidemic Intelligence from public reports in the
 outbreak's first weeks, so it stops at 162 cases. The meaning of `dt_report` against `dt_diag` is not documented, and
 7 cases are reported a day before their diagnosis, SK_1 among them; they are counted as written. How the probable links
 were assigned is not documented either.
 
-Open `fieldwork-project.json.gz` in Fieldwork with **Import**. Needs Fieldwork 0.113.1 or later for the epidemic curve in
-week order.
+Open `fieldwork-project.json.gz` in Fieldwork with **Import**. Needs Fieldwork 0.114.0 or later for the medians, and
+for a median of a column computed by a rule.

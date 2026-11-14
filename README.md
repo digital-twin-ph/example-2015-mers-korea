@@ -10,7 +10,7 @@ outbreak in South Korea, as published in the R package `outbreaks`.
 | `data/mers_korea_2015_facilities.csv` | Each hospital named in the line list's `loc_hosp`, as written, with the facility it is, its coordinates, their source and how sure the identification is. ODbL 1.0 |
 | `data/kdca_mers_2015_cases.csv` | All 185 cases KDCA confirmed in Korea: order, province of the reporting hospital, sex, age, week of report. Korea Disease Control and Prevention Agency, data.go.kr 15155636, no restriction on use. Its values as KDCA writes them, in Korean; only the encoding changed, from CP949 to UTF-8 |
 | `source/kdca_mers_2015_cases_cp949.csv` | The KDCA file as downloaded, CP949 |
-| `data/kdca_mers_2015_dictionary.csv` | Each KDCA column described in English, with data.go.kr's own Korean field description beside it and the codes of province and sex |
+| `data/kdca_mers_2015_dictionary.csv` | Each KDCA column with a short English label, described in English, with data.go.kr's own Korean field description beside it and the codes of province and sex |
 | `data/mers_event_milestones.csv` | The outbreak as one event: emergence, detection and notification dates, and three candidate dates for early response complete, each with the action and its source |
 | `fieldwork-project.json.gz` | The Fieldwork project: *How quickly was each case detected and reported?*, *Who infected whom, and where?*, *Where were the cases in hospital?*, *Who were the 185 cases KDCA confirmed?* and *Did the outbreak’s response meet 7-1-7?* |
 | `scripts/convert.R` | Reads the package's `.RData` and writes the two CSVs, changing no value |

@@ -54,3 +54,18 @@ Provinces: The third workflow's study area is South Korea's 17 provinces from
           (https://github.com/wmgeolab/geoBoundaries), from Natural Earth,
           representing 2021, Public Domain. Carried inside
           fieldwork-project.json.gz; not changed.
+
+KDCA confirmed cases (data/kdca_mers_2015_cases.csv)
+----------------------------------------------------
+
+Source:   Korea Disease Control and Prevention Agency (질병관리청), "메르스
+          확진자 연령 지역 성별 신고주차 자료", data.go.kr dataset 15155636,
+          https://www.data.go.kr/data/15155636/fileData.do (created 2025-12-02,
+          retrieved 2026-11-13, 3,442 bytes in CP949, sha256
+          3dbb93c7debee7840f31b85c4f9d952fcc5f14053c452bf8a6afeeea88718ece).
+
+Terms:    이용허락범위 제한 없음: no restriction on use, as data.go.kr states.
+
+Changed:  Re-encoded from CP949 to UTF-8; no value changed. The original is
+          kept as source/kdca_mers_2015_cases_cp949.csv. The dictionary's
+          English is this example's; data.go.kr's Korean is quoted in it.

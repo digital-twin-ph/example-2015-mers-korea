@@ -1,0 +1,6 @@
+variable,description
+구분,"The case’s number in this file (data.go.kr: 순서, order)"
+등록시도,"Province or metropolitan city of the reporting hospital’s jurisdiction, not the case’s residence (data.go.kr: 병의원 관할 시도 기준) (factor: 강원, Gangwon; 경기, Gyeonggi; 서울, Seoul; 대전, Daejeon; 충남, South Chungcheong; 경북, North Gyeongsang; 경남, South Gyeongsang; 부산, Busan; 전북, North Jeolla; 충북, North Chungcheong; 광주, Gwangju; 전남, South Jeolla; 대구, Daegu; 인천, Incheon)"
+성별,"Sex (data.go.kr: 남자 여자) (factor: 남, male; 여, female)"
+연령,Age in years (data.go.kr: 나이)
+신고 주차,"Week of 2015 in which a hospital reported the case, from the hospital’s report date (data.go.kr: 병의원 신고 기준)"

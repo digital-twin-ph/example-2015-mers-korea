@@ -68,5 +68,40 @@
       "licence": "Public Domain (from Natural Earth), representing 2021",
       "changed": "Nothing"
     }
+  },
+  "kdca": {
+    "retrieved": "2026-11-13",
+    "title": "질병관리청_메르스 확진자 연령 지역 성별 신고주차 자료 (KDCA: MERS confirmed cases by age, region, sex and week of report)",
+    "page": "https://www.data.go.kr/data/15155636/fileData.do",
+    "catalog": "https://www.data.go.kr/catalog/15155636/fileData.json",
+    "publisher": "Korea Disease Control and Prevention Agency (질병관리청), Emerging Infectious Disease Response Division",
+    "created": "2025-12-02",
+    "licence": "이용허락범위 제한 없음: no restriction on use (data.go.kr)",
+    "download": "Through the page’s own download, approved by the Fieldwork practitioner 2026-11-13",
+    "original": {
+      "path": "source/kdca_mers_2015_cases_cp949.csv",
+      "bytes": 3442,
+      "encoding": "CP949",
+      "sha256": "3dbb93c7debee7840f31b85c4f9d952fcc5f14053c452bf8a6afeeea88718ece"
+    },
+    "transcribed": {
+      "path": "data/kdca_mers_2015_cases.csv",
+      "encoding": "UTF-8",
+      "what": "The same text, re-encoded; no value changed",
+      "rows": 185
+    },
+    "dictionary": {
+      "path": "data/kdca_mers_2015_dictionary.csv",
+      "what": "Written for this example from data.go.kr’s field descriptions, quoted in Korean; the English is this example’s"
+    }
+  },
+  "eventMilestones": {
+    "path": "data/mers_event_milestones.csv",
+    "built": "2026-11-13",
+    "what": "Dates of the outbreak as one event, for a 7-1-7 review",
+    "emergence": "2015-05-11, the onset of SK_1 in mers_korea_2015",
+    "detection": "2015-05-20, the laboratory confirmation of SK_1 (dt_diag)",
+    "notification": "2015-05-20, Korea notified WHO the same day (https://www.who.int/westernpacific/emergencies/2015-mers-outbreak)",
+    "earlyResponse": "Three candidates, each with its source; which completes the early response is not decided here (the practitioner, 2026-11-13: \"Show all three\")"
   }
 }

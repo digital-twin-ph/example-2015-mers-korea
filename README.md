@@ -8,7 +8,11 @@ outbreak in South Korea, as published in the R package `outbreaks`.
 | `data/mers_korea_2015_linelist.csv` | 162 cases, 15 columns: age, sex, place of infection, hospital, dates of onset, report, exposure, diagnosis and death, outcome |
 | `data/mers_korea_2015_contacts.csv` | 98 probable links between cases, with the place of exposure and the days between onsets |
 | `data/mers_korea_2015_facilities.csv` | Each hospital named in the line list's `loc_hosp`, as written, with the facility it is, its coordinates, their source and how sure the identification is. ODbL 1.0 |
-| `fieldwork-project.json.gz` | The Fieldwork project: *How quickly was each case detected and reported?*, *Who infected whom, and where?* and *Where were the cases in hospital?* |
+| `data/kdca_mers_2015_cases.csv` | All 185 cases KDCA confirmed in Korea: order, province of the reporting hospital, sex, age, week of report. Korea Disease Control and Prevention Agency, data.go.kr 15155636, no restriction on use. Its values as KDCA writes them, in Korean; only the encoding changed, from CP949 to UTF-8 |
+| `source/kdca_mers_2015_cases_cp949.csv` | The KDCA file as downloaded, CP949 |
+| `data/kdca_mers_2015_dictionary.csv` | Each KDCA column described in English, with data.go.kr's own Korean field description beside it and the codes of province and sex |
+| `data/mers_event_milestones.csv` | The outbreak as one event: emergence, detection and notification dates, and three candidate dates for early response complete, each with the action and its source |
+| `fieldwork-project.json.gz` | The Fieldwork project: *How quickly was each case detected and reported?*, *Who infected whom, and where?*, *Where were the cases in hospital?*, *Who were the 185 cases KDCA confirmed?* and *Did the outbreak’s response meet 7-1-7?* |
 | `scripts/convert.R` | Reads the package's `.RData` and writes the two CSVs, changing no value |
 | `NOTICE.txt`, `provenance.json` | Where the data come from, the terms as found, and what was done |
 
@@ -54,4 +58,24 @@ The provinces are geoBoundaries' gbOpen ADM1 for South Korea (release 9469f09, f
 carried inside the project. Needs Fieldwork 0.110.0 or later: earlier versions draw the hospitals in one colour, and before 0.106.0 refuse the
 provinces as one inside another.
 
-Open `fieldwork-project.json.gz` in Fieldwork with **Import**.
+*Who were the 185 cases KDCA confirmed?* reads KDCA's file of every case confirmed in Korea, 185 against the package's
+162, with KDCA's field descriptions as the data dictionary, and counts the cases by week of report (an epidemic curve),
+by the province of the reporting hospital and by sex. The province is the hospital's, not where the case lived; the week
+is of the hospital's report. The file has no dates finer than a week, so it cannot be timed against 7-1-7 case by case.
+
+*Did the outbreak’s response meet 7-1-7?* treats the outbreak as one event, with the same 7-1-7 ruleset: emergence on
+11 May 2015, the onset of the first case (SK_1); detection on 20 May, its laboratory confirmation; notification on
+20 May, the day Korea notified WHO. **Early response complete is not one recorded date**, so three candidates are each a
+row: contacts quarantined and the first hospital closed (29 May), the 24 affected hospitals named (7 June), and a Rapid
+Response Team set up (8 June). Detection took 9 days, against 7: not met. Notification was the same day: met. The early
+response was 9, 18 or 19 days after detection, not met whichever action counts. The dates are from published
+literature and WHO, cited in the table; which action completes the early response is a judgement this example does not
+make.
+
+**What the package's line list does not say.** It was compiled by ECDC's Epidemic Intelligence from public reports in the
+outbreak's first weeks, so it stops at 162 cases. The meaning of `dt_report` against `dt_diag` is not documented, and
+7 cases are reported a day before their diagnosis, SK_1 among them; they are counted as written. How the probable links
+were assigned is not documented either.
+
+Open `fieldwork-project.json.gz` in Fieldwork with **Import**. Needs Fieldwork 0.113.1 or later for the epidemic curve in
+week order.

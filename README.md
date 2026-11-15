@@ -12,7 +12,7 @@ outbreak in South Korea, as published in the R package `outbreaks`.
 | `source/kdca_mers_2015_cases_cp949.csv` | The KDCA file as downloaded, CP949 |
 | `data/kdca_mers_2015_dictionary.csv` | Each KDCA column with a short English label, described in English, with data.go.kr's own Korean field description beside it and the codes of province and sex |
 | `data/mers_event_milestones.csv` | The outbreak as one event: emergence, detection and notification dates, and three candidate dates for early response complete, each with the action and its source |
-| `fieldwork-project.json.gz` | The Fieldwork project: *How quickly was each case detected and reported?*, *Who infected whom, and where?*, *Where were the cases in hospital?*, *Who were the 185 cases KDCA confirmed?* and *Did the outbreak’s response meet 7-1-7?* |
+| `fieldwork-project.json.gz` | The Fieldwork project: *How quickly was each case detected and reported?*, *Who infected whom, and where?*, *Where were the cases in hospital?*, *Who were the 185 cases KDCA confirmed?*, *Did the outbreak’s response meet 7-1-7?* and six more, through *Did it come in waves?* |
 | `scripts/convert.R` | Reads the package's `.RData` and writes the two CSVs, changing no value |
 | `NOTICE.txt`, `provenance.json` | Where the data come from, the terms as found, and what was done |
 
@@ -93,6 +93,16 @@ link names as a source is declared 0, with that reason), and counts the cases by
 as bars: 151 infected no recorded case, 5 one, 2 two, 1 four, and three infected 21, 26 and 38. Most cases infected
 nobody and three caused most of the outbreak: superspreading. The links are probable, as the package says, so these are
 recorded links, not every infection.
+
+*Did it come in waves?* follows each case's recorded source back to the case its chain starts with (Fieldwork's
+Transmission chains). The 162 cases make 67 chains: one of 94 cases starting with SK_1, over 4 generations; one of 3
+starting with SK_76; and 65 cases with no recorded source, each a chain of one. The epidemic curve by generation counts
+each dated case once (135; 27 have no onset date): 40 in generation 0, 28 in the first, 65 in the second, 2 in the
+third. The second generation is the large wave, the cases infected by the first generation's superspreaders. A table
+lists the chains by size. A chain is the record's: a recorded link is not a proven infection.
+
+*Where were the cases in hospital?* now has an inset on its static map: Seoul, Hwaseong and Pyeongtaek enlarged, where
+eight of the ten placed hospitals are a few kilometres apart.
 
 **Sources, in the write-up.** Each source step records what it is, who published it, where it was read, its licence and
 its citation, so the project's Notes say where every table came from and References lists them.

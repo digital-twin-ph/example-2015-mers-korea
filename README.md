@@ -101,8 +101,8 @@ each dated case once (135; 27 have no onset date): 40 in generation 0, 28 in the
 third. The second generation is the large wave, the cases infected by the first generation's superspreaders. A table
 lists the chains by size. A chain is the record's: a recorded link is not a proven infection.
 
-*Where were the cases in hospital?* now has an inset on its static map: Seoul, Hwaseong and Pyeongtaek enlarged, where
-eight of the ten placed hospitals are a few kilometres apart.
+*Where were the cases in hospital?* now has an inset on its static map: Pyeongtaek enlarged, where four of the ten
+placed hospitals are within about 10 km of each other and their marks overlap at the scale of the country.
 
 **Sources, in the write-up.** Each source step records what it is, who published it, where it was read, its licence and
 its citation, so the project's Notes say where every table came from and References lists them.
